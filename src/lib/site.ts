@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Senior Full-Stack Engineer",
   description:
     "I build fast, scalable web products with Next.js, TypeScript, and AI workflows.",
-  url: "https://benardo.pro",
+  url: "https://benardo.hotcorebeatz.com",
   email: "benardo@hotcorebeatz.com",
   phone: "+254717389815",
   whatsappUrl: "https://wa.me/254717389815",

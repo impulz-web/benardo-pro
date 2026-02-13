@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://benardo.pro"),
+  metadataBase: new URL("https://benardo.hotcorebeatz.com"),
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description:
       "I build clean, fast, conversion-focused web products and automations.",
     type: "website",
-    url: "https://benardo.pro",
+    url: "https://benardo.hotcorebeatz.com",
     siteName: "Benardo Pro",
   },
   twitter: {

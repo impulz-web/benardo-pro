@@ -30,7 +30,7 @@ export async function getServicesOffered(): Promise<ServiceOffered[]> {
     .from("services_offered")
     .select("id, name, description")
     .eq("is_active", true)
-    .order("name", { ascending: true });
+    .order("created_at", { ascending: true });
 
   if (error) {
     throw new Error(`Failed to load services: ${error.message}`);
