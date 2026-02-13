@@ -46,8 +46,8 @@ export const projects: Project[] = [
     ],
     images: ["/projects/hotcorebeatz productions.png"],
     thumbnail: "/projects/hotcorebeatz productions.png",
-    liveSiteUrl: "https://wwwhotcorebeatz.com",
-    liveSiteLabel: "wwwhotcorebeatz.com",
+    liveSiteUrl: "https://www.hotcorebeatz.com",
+    liveSiteLabel: "www.hotcorebeatz.com",
     outcome: "Delivered a scalable music-tech platform that supports artist workflows and monetization",
     problem:
       "Independent artists needed one platform to discover beats, access production services, and manage studio bookings without fragmented tools.",
