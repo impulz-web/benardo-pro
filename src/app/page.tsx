@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FooterCta } from "@/components/site/footer-cta";
 import { HeroImageSwitcher } from "@/components/site/hero-image-switcher";
 import { Navbar } from "@/components/site/navbar";
@@ -23,36 +22,64 @@ export default function Home() {
 
   const process = ["Discover", "Design", "Build", "Ship", "Iterate"];
 
+  const musicProductionServices = [
+    {
+      title: "Beat Making",
+      description:
+        "Custom, industry-ready beats crafted around your sound and artistic direction.",
+    },
+    {
+      title: "Mixing",
+      description:
+        "Clean, balanced mixes that make every vocal and instrument sit perfectly in the track.",
+    },
+    {
+      title: "Mastering",
+      description:
+        "Loud, polished masters optimized for streaming platforms, clubs, and radio playback.",
+    },
+    {
+      title: "Vocal Production",
+      description:
+        "Professional vocal tuning, timing, and enhancement for a radio-ready final sound.",
+    },
+    {
+      title: "Song Arrangement",
+      description:
+        "Structure and creative direction to turn rough ideas into complete, engaging records.",
+    },
+  ];
+
   const musicBusinessServices = [
     {
-      title: "Music Web Apps",
+      title: "Music Distribution",
       description:
-        "Custom beat stores, studio booking systems, and artist dashboards tailored for the music industry.",
+        "Release your music globally across major DSPs with proper metadata and delivery setup.",
     },
     {
-      title: "Business Applications",
+      title: "Release Strategy",
       description:
-        "Scalable CRMs, inventory systems, and administrative dashboards to streamline operations.",
+        "Campaign planning for singles, EPs, and albums to maximize reach and listener growth.",
     },
     {
-      title: "No-Code Prototyping",
+      title: "Royalties & Publishing Setup",
       description:
-        "Rapid MVP development and high-fidelity prototypes using modern no-code tools and AI.",
+        "Guidance on collecting publishing, performance, and neighboring rights revenue correctly.",
     },
     {
-      title: "API Integrations",
+      title: "Artist Branding",
       description:
-        "Seamless connection of third-party services (Stripe, PayPal, Spotify API) into your application.",
+        "Define your visual identity and positioning so your brand stays memorable and marketable.",
     },
     {
-      title: "Supabase Architecture",
+      title: "Playlist & DSP Pitching",
       description:
-        "Secure, real-time backend solutions with database design and edge functions.",
+        "Strategic pitching support to improve your chances of playlist placements and discovery.",
     },
     {
-      title: "SEO & Performance",
+      title: "Catalog Management",
       description:
-        "Next.js optimization for Core Web Vitals to ensure top ranking and lightning-fast load times.",
+        "Organize, track, and optimize your existing releases for long-term catalog performance.",
     },
   ];
 
@@ -145,9 +172,31 @@ export default function Home() {
         <section className="py-16 sm:py-20">
           <Container>
             <SectionHeader
-              kicker="Music Business Strategist"
-              title="Services"
-              subtitle="Helping artists and teams build sustainable music systems from sound to release strategy."
+              kicker="Music Production"
+              title="Music Production Services"
+              subtitle="High-quality production support from beat creation to release-ready audio finishing."
+            />
+
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {musicProductionServices.map((service) => (
+                <article
+                  key={service.title}
+                  className="rounded-2xl border border-white/10 bg-surface p-6 shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]"
+                >
+                  <h3 className="text-lg font-bold leading-tight text-foreground">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-text">{service.description}</p>
+                </article>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        <section className="py-16 sm:py-20">
+          <Container>
+            <SectionHeader
+              kicker="Music Business"
+              title="Music Business Services"
+              subtitle="Strategic services to help artists release smarter, grow faster, and monetize effectively."
             />
 
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
