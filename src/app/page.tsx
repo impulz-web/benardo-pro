@@ -9,7 +9,7 @@ import { getProjects } from "@/data/projects";
 import { siteConfig } from "@/lib/site";
 
 export default function Home() {
-  const projects = getProjects().slice(0, 3);
+  const projects = getProjects();
 
   const capabilities = [
     "Full-stack product builds",
