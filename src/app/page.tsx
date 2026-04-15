@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeader } from "@/components/ui/section-header";
 import { PricingSection } from "@/components/pricing/pricing-section";
+import { CanonicalURL } from "@/components/seo/canonical-url";
 import { getProjects } from "@/data/projects";
 import { siteConfig } from "@/lib/site";
 
@@ -254,6 +255,38 @@ export default function Home() {
         </section>
 
         <FooterCta />
+
+        {/* Local SEO Content Section */}
+        <section className="py-16 sm:py-20">
+          <Container>
+            <div className="rounded-2xl border border-white/10 bg-surface p-8 text-center">
+              <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
+                Serving Clients Across Kenya & Africa
+              </h2>
+              <p className="mt-4 max-w-3xl mx-auto text-sm text-text sm:text-base">
+                Based in <strong className="text-foreground">Nakuru, Kenya</strong>, I provide professional web development and music business strategy services to clients across Kenya including Nairobi, Mombasa, Kisumu, Eldoret, and throughout Africa. 
+                Whether you need a simple website, e-commerce solution with M-Pesa integration, or music business consulting, I deliver high-quality, affordable solutions tailored to your needs.
+              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs text-text-muted">
+                <span>Nakuru</span>
+                <span>•</span>
+                <span>Nairobi</span>
+                <span>•</span>
+                <span>Mombasa</span>
+                <span>•</span>
+                <span>Kisumu</span>
+                <span>•</span>
+                <span>Eldoret</span>
+                <span>•</span>
+                <span>Thika</span>
+                <span>•</span>
+                <span>Kenya</span>
+                <span>•</span>
+                <span>Africa</span>
+              </div>
+            </div>
+          </Container>
+        </section>
       </main>
 
       <footer className="pb-10">

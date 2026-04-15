@@ -1,0 +1,113 @@
+# Robots.txt for Benardo Pro
+# https://benardo.hotcorebeatz.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://benardo.hotcorebeatz.com/sitemap.xml
+
+# Allow all search engines to crawl the entire site
+
+# Google AdsBot
+User-agent: AdsBot-Google
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# Baiduspider
+User-agent: Baiduspider
+Allow: /
+
+# Sogou Spider
+User-agent: Sogou Spider
+Allow: /
+
+# 360 Spider
+User-agent: 360Spider
+Allow: /
+
+# Yahoo! Slurp
+User-agent: Slurp
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Facebook
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+
+# Pinterest
+User-agent: Pinterest
+Allow: /
+
+# WhatsApp
+User-agent: WhatsApp
+Allow: /
+
+# Telegram
+User-agent: TelegramBot
+Allow: /
+
+# Crawlers that should be blocked
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: Datafeedwatch
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: SiteExplorer
+Disallow: /
+
+User-agent: Siteimprove
+Disallow: /
+
+User-agent: Sitebulb
+Disallow: /
+
+User-agent: Screaming Frog
+Disallow: /
+
+# Crawl delay for aggressive bots
+Crawl-delay: 5
+
+# Host
+Host: https://benardo.hotcorebeatz.com

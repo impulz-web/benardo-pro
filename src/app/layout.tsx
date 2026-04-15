@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SEOMetadata } from "@/components/seo/seo-metadata";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,24 +21,68 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
   },
   title: {
-    default: "Benardo Pro | Senior Full-Stack Engineer",
+    default: "Benardo Pro | Web Development & Music Business Strategy in Nakuru, Kenya",
     template: "%s | Benardo Pro",
   },
   description:
-    "Minimal premium portfolio for Benardo, a senior full-stack engineer shipping fast, scalable products with Next.js, TypeScript, and AI workflows.",
+    "Professional web development and music business strategy services in Nakuru, Kenya. Expert full-stack development with Next.js, TypeScript, and AI workflows. Serving clients across Kenya and Africa.",
+  keywords: [
+    "web development Nakuru",
+    "website developer Kenya",
+    "full-stack developer Africa",
+    "music business strategy Kenya",
+    "e-commerce website Kenya",
+    "Next.js developer Nakuru",
+    "TypeScript developer Kenya",
+    "website design Kenya",
+    "online store Kenya",
+    "M-Pesa integration",
+    "digital marketing Nakuru",
+    "music production Kenya",
+    "artist branding Africa",
+    "startup website Kenya",
+    "business website Africa",
+    "freelance developer Nakuru",
+    "web agency Kenya",
+    "professional website Kenya",
+    "affordable website Kenya",
+    "custom web development Africa",
+  ],
+  authors: [{ name: "Benardo", url: "https://benardo.hotcorebeatz.com" }],
+  creator: "Benardo",
+  publisher: "Benardo Pro",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
-    title: "Benardo Pro | Senior Full-Stack Engineer",
+    title: "Benardo Pro | Web Development & Music Business Strategy in Nakuru, Kenya",
     description:
-      "I build clean, fast, conversion-focused web products and automations.",
+      "Professional web development and music business strategy services in Nakuru, Kenya. Expert full-stack development with Next.js, TypeScript, and AI workflows.",
     type: "website",
     url: "https://benardo.hotcorebeatz.com",
     siteName: "Benardo Pro",
+    locale: "en_KE",
+    alternateLocale: ["en_US", "en_GB"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Benardo Pro | Senior Full-Stack Engineer",
+    title: "Benardo Pro | Web Development & Music Business Strategy in Nakuru, Kenya",
     description:
-      "Premium minimal portfolio built with Next.js and a Hotcorebeatz-inspired theme.",
+      "Professional web development and music business strategy services in Nakuru, Kenya. Expert full-stack development with Next.js, TypeScript, and AI workflows.",
+    creator: "@benardopro",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -48,6 +93,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <SEOMetadata />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
