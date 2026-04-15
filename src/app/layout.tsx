@@ -21,12 +21,15 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
   },
   title: {
-    default: "Benardo Pro | Web Development & Music Business Strategy in Nakuru, Kenya",
+    default: "Benardo Pro | Full-Stack Web Developer & Music Business Strategist in Kenya",
     template: "%s | Benardo Pro",
   },
   description:
-    "Professional web development and music business strategy services in Nakuru, Kenya. Expert full-stack development with Next.js, TypeScript, and AI workflows. Serving clients across Kenya and Africa.",
+    "Benardo Pro provides full-stack web development and music business strategy services in Kenya. Build fast, scalable websites, product platforms, and SEO-focused digital experiences with Next.js, TypeScript, and AI workflows.",
   keywords: [
+    "Benardo Pro",
+    "Benardo Pro Kenya",
+    "Benardo Pro developer",
     "web development Nakuru",
     "website developer Kenya",
     "full-stack developer Africa",
@@ -57,9 +60,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Benardo Pro | Web Development & Music Business Strategy in Nakuru, Kenya",
+    title: "Benardo Pro | Full-Stack Web Developer & Music Business Strategist in Kenya",
     description:
-      "Professional web development and music business strategy services in Nakuru, Kenya. Expert full-stack development with Next.js, TypeScript, and AI workflows.",
+      "Benardo Pro provides full-stack web development and music business strategy services in Kenya, with SEO-focused builds powered by Next.js, TypeScript, and AI workflows.",
     type: "website",
     url: "https://benardo.hotcorebeatz.com",
     siteName: "Benardo Pro",
@@ -68,9 +71,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Benardo Pro | Web Development & Music Business Strategy in Nakuru, Kenya",
+    title: "Benardo Pro | Full-Stack Web Developer & Music Business Strategist in Kenya",
     description:
-      "Professional web development and music business strategy services in Nakuru, Kenya. Expert full-stack development with Next.js, TypeScript, and AI workflows.",
+      "Benardo Pro provides full-stack web development and music business strategy services in Kenya, with SEO-focused builds powered by Next.js, TypeScript, and AI workflows.",
     creator: "@benardopro",
   },
   robots: {

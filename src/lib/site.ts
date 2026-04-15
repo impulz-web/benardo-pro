@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Benardo Pro",
-  title: "Senior Full-Stack Engineer",
+  title: "Benardo Pro | Full-Stack Web Developer & Music Business Strategist",
   description:
-    "I build fast, scalable web products with Next.js, TypeScript, and AI workflows.",
+    "Benardo Pro builds fast, scalable web products and SEO-focused digital experiences with Next.js, TypeScript, and AI workflows.",
   url: "https://benardo.hotcorebeatz.com",
   email: "benardo@hotcorebeatz.com",
   phone: "+254717389815",
