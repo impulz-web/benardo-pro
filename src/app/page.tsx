@@ -5,6 +5,7 @@ import { ProjectCard } from "@/components/project/project-card";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeader } from "@/components/ui/section-header";
+import { PricingSection } from "@/components/pricing/pricing-section";
 import { getProjects } from "@/data/projects";
 import { siteConfig } from "@/lib/site";
 
@@ -212,6 +213,8 @@ export default function Home() {
             </div>
           </Container>
         </section>
+
+        <PricingSection />
 
         <section className="py-16 sm:py-20">
           <Container>
