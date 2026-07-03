@@ -16,8 +16,13 @@ export function FooterCta() {
             </p>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Button href="/contact" className="w-full sm:w-auto">Book a call</Button>
-              <Button href={`mailto:${siteConfig.email}`} variant="secondary">
+              <Button href="https://premium.chat/MrCrusher" className="w-full sm:w-auto">
+                Chat With Me
+              </Button>
+              <Button href="/contact" variant="secondary" className="w-full sm:w-auto">
+                Book a call
+              </Button>
+              <Button href={`mailto:${siteConfig.email}`} variant="ghost">
                 Email me
               </Button>
             </div>

@@ -154,9 +154,12 @@ export default function Home() {
               <p className="mt-4 max-w-2xl mx-auto text-base text-text sm:text-lg">
                 Check out all my projects and portfolio at Hotcoreweb Services
               </p>
-              <div className="mt-8">
+              <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
                 <Button href="https://hws.hotcorebeatz.com/" size="lg" className="text-lg px-10 py-6">
                   Browse Projects →
+                </Button>
+                <Button href="https://premium.chat/MrCrusher" size="lg" className="text-lg px-10 py-6" variant="secondary">
+                  Chat With Me
                 </Button>
               </div>
             </div>
@@ -168,7 +171,12 @@ export default function Home() {
 
       <footer className="pb-10">
         <Container>
-          <p className="text-xs text-text-muted">© {new Date().getFullYear()} Benard M. All rights reserved.</p>
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-xs text-text-muted">© {new Date().getFullYear()} Benard M. All rights reserved.</p>
+            <a href="https://premium.chat/MrCrusher" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline text-sm">
+              Chat With Me
+            </a>
+          </div>
         </Container>
       </footer>
     </div>
