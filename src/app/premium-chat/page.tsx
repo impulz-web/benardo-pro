@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/site/navbar";
 import { Container } from "@/components/ui/container";
+import { Button } from "@/components/ui/button";
 import PremiumChatWidget from "@/components/site/PremiumChatWidget";
 
 export const metadata = {
@@ -23,6 +24,16 @@ export default function PremiumChatPage() {
 
           <div className="flex flex-col items-center space-y-8">
             <PremiumChatWidget />
+            
+            <Button 
+              href="https://premium.chat/MrCrusher" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              size="lg" 
+              className="text-base"
+            >
+              Premium Chat
+            </Button>
             
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
               <h2 className="text-xl font-semibold text-foreground mb-4">How it works</h2>
