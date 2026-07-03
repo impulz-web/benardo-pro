@@ -27,8 +27,6 @@ export default function PremiumChatPage() {
             
             <Button 
               href="https://premium.chat/MrCrusher" 
-              target="_blank" 
-              rel="noopener noreferrer" 
               size="lg" 
               className="text-base"
             >
