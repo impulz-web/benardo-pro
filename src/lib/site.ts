@@ -13,6 +13,6 @@ export const siteConfig = {
     { href: "https://www.hotcorebeatz.com/consultant/about", label: "About" },
     { href: "/resume", label: "Resume" },
     { href: "/contact", label: "Contact" },
-    { href: "/premium-chat", label: "Premium Chat" },
+    { href: "/premium-chat", label: "Chat With Me" },
   ],
 } as const;
