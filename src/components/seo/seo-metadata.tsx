@@ -1,16 +1,16 @@
-import Script from "next/script";
-
 export function SEOMetadata() {
   return (
     <>
       {/* JSON-LD Structured Data */}
-      <Script id="structured-data" strategy="afterInteractive">
-        {`
-          {
+      <script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "@id": "https://benardo.hotcorebeatz.com",
-            "name": "Benardo Pro",
+            "name": "Benard Mulindi",
             "image": "https://benardo.hotcorebeatz.com/benardo-hero-image.png",
             "url": "https://benardo.hotcorebeatz.com",
             "telephone": "+254717389815",
@@ -60,86 +60,26 @@ export function SEOMetadata() {
             "sameAs": [
               "https://wa.me/254717389815"
             ],
-            "description": "Professional web development and music business strategy services in Nakuru, Kenya. Expert full-stack development with Next.js, TypeScript, and AI workflows.",
-            "keywords": "web development Nakuru, website developer Kenya, full-stack developer Africa, music business strategy Kenya, e-commerce website Kenya, Next.js developer Nakuru, TypeScript developer Kenya",
+            "description": "Professional web development and media production services in Nakuru, Kenya. Expert full-stack development with Next.js, TypeScript, and AI workflows.",
+            "keywords": "web development Nakuru, website developer Kenya, full-stack developer Africa, media production Kenya, e-commerce website Kenya, Next.js developer Nakuru, TypeScript developer Kenya",
             "founder": {
               "@type": "Person",
-              "name": "Benardo"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Web Development Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Consultation",
-                    "description": "1-on-1 expert guidance for music business & digital strategy"
-                  },
-                  "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "price": "1000",
-                    "priceCurrency": "KES",
-                    "unitText": "hour"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Starter Website Package",
-                    "description": "Professional online presence for individuals and startups"
-                  },
-                  "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "price": "15000",
-                    "priceCurrency": "KES",
-                    "unitText": "one-time"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Business Website",
-                    "description": "Powerful, scalable online presence for growing businesses"
-                  },
-                  "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "price": "30000",
-                    "priceCurrency": "KES",
-                    "unitText": "one-time"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "E-commerce Website",
-                    "description": "Full online store with payment gateway integration"
-                  },
-                  "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "price": "50000",
-                    "priceCurrency": "KES",
-                    "unitText": "one-time"
-                  }
-                }
-              ]
+              "name": "Benard Mulindi"
             }
-          }
-        `}
-      </Script>
+          })
+        }}
+      />
 
       {/* Local Business Schema */}
-      <Script id="local-business-schema" strategy="afterInteractive">
-        {`
-          {
+      <script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Benardo Pro",
-            "description": "Professional web development and music business strategy services in Nakuru, Kenya",
+            "name": "Benard Mulindi",
+            "description": "Professional web development and media production services in Nakuru, Kenya",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Nakuru",
@@ -165,14 +105,16 @@ export function SEOMetadata() {
             "sameAs": [
               "https://wa.me/254717389815"
             ]
-          }
-        `}
-      </Script>
+          })
+        }}
+      />
 
       {/* Breadcrumb Schema */}
-      <Script id="breadcrumb-schema" strategy="afterInteractive">
-        {`
-          {
+      <script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -186,7 +128,7 @@ export function SEOMetadata() {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Projects",
-                "item": "https://benardo.hotcorebeatz.com/projects"
+                "item": "https://hws.hotcorebeatz.com"
               },
               {
                 "@type": "ListItem",
@@ -195,9 +137,9 @@ export function SEOMetadata() {
                 "item": "https://benardo.hotcorebeatz.com/contact"
               }
             ]
-          }
-        `}
-      </Script>
+          })
+        }}
+      />
     </>
   );
 }
