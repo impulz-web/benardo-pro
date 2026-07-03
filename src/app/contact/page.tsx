@@ -20,11 +20,17 @@ export default function ContactPage() {
           <Container>
             <SectionHeader
               kicker="Contact"
-              title="Choose Your Service"
-              subtitle="Select the service you need below"
+              title="Get In Touch"
+              subtitle="Connect with me directly for fast, personalized support"
             />
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <div className="mt-12 flex justify-center">
+              <Button href="https://premium.chat/MrCrusher" size="lg" className="text-base px-10 py-4">
+                Chat With Me Now
+              </Button>
+            </div>
+
+            <div className="mt-16 grid gap-6 md:grid-cols-2">
               <div className="rounded-2xl border border-white/10 bg-surface p-8 text-center shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
                 <h3 className="text-2xl font-bold text-foreground">Media Production</h3>
                 <p className="mt-4 text-sm leading-relaxed text-text">
