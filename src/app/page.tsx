@@ -48,6 +48,9 @@ export default function Home() {
                 <Button href="https://hws.hotcorebeatz.com/" className="w-full sm:w-auto">
                   Browse Projects
                 </Button>
+                <Button href="https://premium.chat/MrCrusher" className="w-full sm:w-auto">
+                  Chat With Me
+                </Button>
                 <Button href="/contact" variant="secondary" className="w-full sm:w-auto">
                   Get in Touch
                 </Button>
