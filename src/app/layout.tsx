@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SEOMetadata } from "@/components/seo/seo-metadata";
+import PremiumChatWidget from "@/components/site/PremiumChatWidget";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,19 +22,19 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
   },
   title: {
-    default: "Benardo Pro | Full-Stack Web Developer & Music Business Strategist in Kenya",
-    template: "%s | Benardo Pro",
+    default: "Benard Mulindi | Full-Stack Web Developer & Media Producer",
+    template: "%s | Benard Mulindi",
   },
   description:
-    "Benardo Pro provides full-stack web development and music business strategy services in Kenya. Build fast, scalable websites, product platforms, and SEO-focused digital experiences with Next.js, TypeScript, and AI workflows.",
+    "Benard Mulindi provides full-stack web development and media production services. Build fast, scalable websites, product platforms, and digital experiences with Next.js, TypeScript, and AI workflows.",
   keywords: [
-    "Benardo Pro",
-    "Benardo Pro Kenya",
-    "Benardo Pro developer",
+    "Benard Mulindi",
+    "Benard Mulindi Kenya",
+    "Benard Mulindi developer",
     "web development Nakuru",
     "website developer Kenya",
     "full-stack developer Africa",
-    "music business strategy Kenya",
+    "media production Kenya",
     "e-commerce website Kenya",
     "Next.js developer Nakuru",
     "TypeScript developer Kenya",
@@ -51,29 +52,29 @@ export const metadata: Metadata = {
     "affordable website Kenya",
     "custom web development Africa",
   ],
-  authors: [{ name: "Benardo", url: "https://benardo.hotcorebeatz.com" }],
-  creator: "Benardo",
-  publisher: "Benardo Pro",
+  authors: [{ name: "Benard Mulindi", url: "https://benardo.hotcorebeatz.com" }],
+  creator: "Benard Mulindi",
+  publisher: "Benard Mulindi",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "Benardo Pro | Full-Stack Web Developer & Music Business Strategist in Kenya",
+    title: "Benard Mulindi | Full-Stack Web Developer & Media Producer",
     description:
-      "Benardo Pro provides full-stack web development and music business strategy services in Kenya, with SEO-focused builds powered by Next.js, TypeScript, and AI workflows.",
+      "Benard Mulindi provides full-stack web development and media production services, with SEO-focused builds powered by Next.js, TypeScript, and AI workflows.",
     type: "website",
     url: "https://benardo.hotcorebeatz.com",
-    siteName: "Benardo Pro",
+    siteName: "Benard Mulindi",
     locale: "en_KE",
     alternateLocale: ["en_US", "en_GB"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Benardo Pro | Full-Stack Web Developer & Music Business Strategist in Kenya",
+    title: "Benard Mulindi | Full-Stack Web Developer & Media Producer",
     description:
-      "Benardo Pro provides full-stack web development and music business strategy services in Kenya, with SEO-focused builds powered by Next.js, TypeScript, and AI workflows.",
+      "Benard Mulindi provides full-stack web development and media production services, with SEO-focused builds powered by Next.js, TypeScript, and AI workflows.",
     creator: "@benardopro",
   },
   robots: {
@@ -103,6 +104,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <PremiumChatWidget />
       </body>
     </html>
   );
