@@ -3,6 +3,13 @@
 import Script from "next/script";
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    premiumchat?: any[];
+    premiumchat_domain?: string;
+  }
+}
+
 export default function PremiumChatWidget() {
   useEffect(() => {
     // Initialize premium chat
