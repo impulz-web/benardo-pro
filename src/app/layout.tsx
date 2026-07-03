@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SEOMetadata } from "@/components/seo/seo-metadata";
-import PremiumChatWidget from "@/components/site/PremiumChatWidget";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -104,7 +103,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <PremiumChatWidget />
       </body>
     </html>
   );
