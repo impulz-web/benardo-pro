@@ -1,69 +1,53 @@
 import type { Metadata } from "next";
-import { ContactForm } from "@/components/contact/contact-form";
 import { FooterCta } from "@/components/site/footer-cta";
 import { Navbar } from "@/components/site/navbar";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { siteConfig } from "@/lib/site";
-import { getServicesOffered } from "@/lib/supabase/server";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Start a project with Benardo Pro.",
+  description: "Get in touch with Benard M.",
 };
 
-export default async function ContactPage() {
-  const services = await getServicesOffered().catch(() => []);
-
+export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
       <main>
         <section className="py-20 sm:py-28">
-          <Container className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-header/85">Contact</p>
-              <h1 className="mt-4 text-4xl font-black tracking-[-0.02em] text-foreground sm:text-5xl">
-                Let&apos;s build your next product.
-              </h1>
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-text">
-                Share your goals, timeline, and constraints. I&apos;ll respond with a practical plan and build path.
-              </p>
+          <Container>
+            <SectionHeader
+              kicker="Contact"
+              title="Choose Your Service"
+              subtitle="Select the service you need below"
+            />
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Button href={`mailto:${siteConfig.email}`} className="w-full sm:w-auto">Email me</Button>
-                <Button href={siteConfig.whatsappUrl} external className="w-full sm:w-auto">
-                  WhatsApp me
-                </Button>
-                <Button href="/projects" variant="secondary" className="w-full sm:w-auto">
-                  View case studies
-                </Button>
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              <div className="rounded-2xl border border-white/10 bg-surface p-8 text-center shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
+                <h3 className="text-2xl font-bold text-foreground">Media Production</h3>
+                <p className="mt-4 text-sm leading-relaxed text-text">
+                  For audio production, beat making, and media services
+                </p>
+                <div className="mt-8">
+                  <Button href="https://www.hotcorebeatz.com/contact" size="lg">
+                    Contact Media Production →
+                  </Button>
+                </div>
               </div>
-            </div>
 
-            <div className="rounded-3xl border border-white/12 bg-surface p-6 shadow-[0_20px_45px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(0,0,0,0.45)]">
-              <h2 className="text-lg font-bold text-foreground">Tell me about your project</h2>
-              <p className="mt-2 text-sm text-text">
-                Fill in the form and I&apos;ll get back to you with a tailored plan.
-              </p>
-
-              <ContactForm services={services} />
-
-              <ul className="mt-6 space-y-3 border-t border-white/10 pt-6 text-sm text-text">
-                <li>
-                  <span className="font-semibold text-foreground">Email:</span> {siteConfig.email}
-                </li>
-                <li>
-                  <span className="font-semibold text-foreground">Call / WhatsApp:</span> {siteConfig.phone}
-                </li>
-                <li>
-                  <span className="font-semibold text-foreground">Response time:</span> Within 24 hours
-                </li>
-                <li>
-                  <span className="font-semibold text-foreground">Typical kickoff:</span> 3–7 days
-                </li>
-              </ul>
+              <div className="rounded-2xl border border-white/10 bg-surface p-8 text-center shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
+                <h3 className="text-2xl font-bold text-foreground">Web Development</h3>
+                <p className="mt-4 text-sm leading-relaxed text-text">
+                  For web development, software, and tech services
+                </p>
+                <div className="mt-8">
+                  <Button href="https://hws.hotcorebeatz.com/pricing" size="lg">
+                    Contact Web Development →
+                  </Button>
+                </div>
+              </div>
             </div>
           </Container>
         </section>

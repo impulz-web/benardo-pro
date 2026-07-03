@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
 import { FooterCta } from "@/components/site/footer-cta";
 import { Navbar } from "@/components/site/navbar";
-import { ProjectCard } from "@/components/project/project-card";
 import { Container } from "@/components/ui/container";
 import { SectionHeader } from "@/components/ui/section-header";
-import { getProjects } from "@/data/projects";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Case studies and outcomes from production products and systems.",
+  description: "View all projects at Hotcoreweb Services.",
 };
 
 export default function ProjectsPage() {
-  const projects = getProjects();
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -23,14 +20,22 @@ export default function ProjectsPage() {
           <Container>
             <SectionHeader
               kicker="Projects"
-              title="Case studies that focus on outcomes"
-              subtitle="A curated set of production builds with measurable impact across conversion, speed, and operations."
+              title="My Portfolio & Projects"
+              subtitle="All my projects are hosted at Hotcoreweb Services"
             />
 
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project) => (
-                <ProjectCard key={project.slug} project={project} />
-              ))}
+            <div className="mt-12 text-center">
+              <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-surface to-accent/10 p-10 shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  Visit My Projects
+                </h3>
+                <p className="text-sm leading-relaxed text-text mb-8">
+                  Check out all my work and projects at Hotcoreweb Services
+                </p>
+                <Button href="https://hws.hotcorebeatz.com/" size="lg">
+                  Browse Projects →
+                </Button>
+              </div>
             </div>
           </Container>
         </section>

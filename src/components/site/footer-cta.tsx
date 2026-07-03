@@ -8,7 +8,7 @@ export function FooterCta() {
       <Container>
         <div className="relative overflow-hidden rounded-[30px] border border-white/12 bg-surface p-8 shadow-[0_20px_45px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(0,0,0,0.45)] sm:p-10">
           <div className="relative z-10">
-            <h3 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
+            <h3 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
               Let&apos;s build something clean, fast, and profitable.
             </h3>
             <p className="mt-3 max-w-2xl text-sm text-text sm:text-base">

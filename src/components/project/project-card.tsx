@@ -23,7 +23,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       ) : null}
 
       <div className="mb-4 flex items-center justify-between gap-4">
-        <h3 className="text-lg font-bold tracking-tight text-foreground">{project.name}</h3>
+        <h3 className="text-lg font-semibold tracking-tight text-foreground">{project.name}</h3>
         <span className="text-xs font-semibold text-accent">{project.outcome}</span>
       </div>
 

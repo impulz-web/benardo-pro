@@ -1,88 +1,25 @@
 import { FooterCta } from "@/components/site/footer-cta";
 import { HeroImageSwitcher } from "@/components/site/hero-image-switcher";
 import { Navbar } from "@/components/site/navbar";
-import { ProjectCard } from "@/components/project/project-card";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeader } from "@/components/ui/section-header";
-import { PricingSection } from "@/components/pricing/pricing-section";
-import { CanonicalURL } from "@/components/seo/canonical-url";
-import { getProjects } from "@/data/projects";
 import { siteConfig } from "@/lib/site";
 
 export default function Home() {
-  const projects = getProjects();
-
-  const capabilities = [
-    "Full-stack product builds",
-    "Admin dashboards + auth roles",
-    "Payments + subscriptions",
-    "Performance + SEO",
-    "Automations / AI workflows",
-    "Deployment + CI",
-  ];
-
-  const process = ["Discover", "Design", "Build", "Ship", "Iterate"];
-
-  const musicProductionServices = [
-    {
-      title: "Beat Making",
-      description:
-        "Custom, industry-ready beats crafted around your sound and artistic direction.",
-    },
-    {
-      title: "Mixing",
-      description:
-        "Clean, balanced mixes that make every vocal and instrument sit perfectly in the track.",
-    },
-    {
-      title: "Mastering",
-      description:
-        "Loud, polished masters optimized for streaming platforms, clubs, and radio playback.",
-    },
-    {
-      title: "Vocal Production",
-      description:
-        "Professional vocal tuning, timing, and enhancement for a radio-ready final sound.",
-    },
-    {
-      title: "Song Arrangement",
-      description:
-        "Structure and creative direction to turn rough ideas into complete, engaging records.",
-    },
-  ];
-
-  const musicBusinessServices = [
-    {
-      title: "Music Distribution",
-      description:
-        "Release your music globally across major DSPs with proper metadata and delivery setup.",
-    },
-    {
-      title: "Release Strategy",
-      description:
-        "Campaign planning for singles, EPs, and albums to maximize reach and listener growth.",
-    },
-    {
-      title: "Royalties & Publishing Setup",
-      description:
-        "Guidance on collecting publishing, performance, and neighboring rights revenue correctly.",
-    },
-    {
-      title: "Artist Branding",
-      description:
-        "Define your visual identity and positioning so your brand stays memorable and marketable.",
-    },
-    {
-      title: "Playlist & DSP Pitching",
-      description:
-        "Strategic pitching support to improve your chances of playlist placements and discovery.",
-    },
-    {
-      title: "Catalog Management",
-      description:
-        "Organize, track, and optimize your existing releases for long-term catalog performance.",
-    },
+  const technicalSkills = [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Supabase",
+    "PostgreSQL",
+    "Stripe",
+    "Node.js",
+    "Vercel",
+    "Cloudflare",
+    "Git",
+    "AI/ML Workflows"
   ];
 
   return (
@@ -99,20 +36,20 @@ export default function Home() {
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-header/85">
                 {siteConfig.name}
               </p>
-              <h1 className="text-4xl font-black leading-[1.05] tracking-[-0.03em] text-foreground sm:text-5xl lg:text-7xl">
-                I am a Fullstack Developer and Music Business Strategist
-                <span className="mt-3 block h-[3px] w-28 rounded bg-gradient-to-r from-accent to-transparent lg:w-44" />
+              <h1 className="text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-foreground sm:text-6xl lg:text-8xl">
+                Benard M
+                <span className="mt-3 block h-[4px] w-40 rounded bg-gradient-to-r from-accent to-transparent lg:w-56" />
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-text sm:text-lg">
-                I build fast, scalable web products with Next.js, TypeScript, and AI workflows.
+                Full-stack developer & media producer building digital products and creative experiences.
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-start">
-                <Button href="/contact" className="w-full sm:w-auto">
-                  Book a call
+                <Button href="https://hws.hotcorebeatz.com/" className="w-full sm:w-auto">
+                  Browse Projects
                 </Button>
-                <Button href="/projects" variant="secondary" className="w-full sm:w-auto">
-                  View projects
+                <Button href="/contact" variant="secondary" className="w-full sm:w-auto">
+                  Get in Touch
                 </Button>
               </div>
             </div>
@@ -122,9 +59,9 @@ export default function Home() {
 
               <div className="mt-4 space-y-3">
                 {[
-                  "2+ years building products",
-                  "production releases shipped",
-                  "Next.js, TypeScript, AI-native systems",
+                  "Full-Stack Developer",
+                  "Media Producer",
+                  "Building products for creators",
                 ].map((item) => (
                   <p key={item} className="rounded-full border border-white/12 bg-black/20 px-4 py-2 text-sm text-foreground">
                     {item}
@@ -135,22 +72,27 @@ export default function Home() {
           </Container>
         </section>
 
-        <section className="py-10">
+        <section className="py-16 sm:py-20">
           <Container>
-            <div className="flex flex-wrap items-center gap-2">
-              {[
-                "Next.js",
-                "React",
-                "Supabase",
-                "Postgres",
-                "Cloudflare",
-                "Vercel",
-                "Stripe",
-              ].map((stack) => (
-                <span key={stack} className="rounded-full border border-white/10 bg-surface px-3 py-1 text-xs font-medium text-text">
-                  {stack}
-                </span>
-              ))}
+            <SectionHeader
+              kicker="Professional"
+              title="What I Do"
+              subtitle="Two distinct professional paths converging to create unique value"
+            />
+
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="rounded-2xl border border-white/10 bg-surface p-8 shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
+                <h3 className="text-2xl font-bold text-foreground">Full Stack Developer</h3>
+                <p className="mt-4 text-sm leading-relaxed text-text">
+                  Building fast, scalable web applications with modern technologies like Next.js, TypeScript, and AI workflows.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-surface p-8 shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
+                <h3 className="text-2xl font-bold text-foreground">Media Producer</h3>
+                <p className="mt-4 text-sm leading-relaxed text-text">
+                  Creating professional audio production, beat making, and music business solutions for artists and creators.
+                </p>
+              </div>
             </div>
           </Container>
         </section>
@@ -158,15 +100,26 @@ export default function Home() {
         <section className="py-16 sm:py-20">
           <Container>
             <SectionHeader
-              kicker="Featured Work"
-              title="Outcome-focused projects"
-              subtitle="A selection of systems and product builds designed to improve speed, conversion, and operational efficiency."
+              kicker="Current Focus"
+              title="What I'm Working On Right Now"
+              subtitle="Founding and building two impactful ventures"
             />
 
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project) => (
-                <ProjectCard key={project.slug} project={project} />
-              ))}
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="rounded-2xl border border-white/10 bg-surface p-8 shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
+                <p className="text-xs font-semibold text-accent">Founder</p>
+                <h3 className="text-2xl font-bold text-foreground mt-2">Hotcorebeatz Production</h3>
+                <p className="mt-4 text-sm leading-relaxed text-text">
+                  Beat selling platform and studio management for independent artists and creators.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-surface p-8 shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
+                <p className="text-xs font-semibold text-accent">Founder</p>
+                <h3 className="text-2xl font-bold text-foreground mt-2">Hotcoreweb Services (HWS)</h3>
+                <p className="mt-4 text-sm leading-relaxed text-text">
+                  Software company focused on web development, digital products, and tech solutions for businesses.
+                </p>
+              </div>
             </div>
           </Container>
         </section>
@@ -174,61 +127,15 @@ export default function Home() {
         <section className="py-16 sm:py-20">
           <Container>
             <SectionHeader
-              kicker="Music Production"
-              title="Music Production Services"
-              subtitle="High-quality production support from beat creation to release-ready audio finishing."
+              kicker="Skills"
+              title="Technical Skills"
+              subtitle="Technologies and tools I work with daily"
             />
 
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {musicProductionServices.map((service) => (
-                <article
-                  key={service.title}
-                  className="rounded-2xl border border-white/10 bg-surface p-6 shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]"
-                >
-                  <h3 className="text-lg font-bold leading-tight text-foreground">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-text">{service.description}</p>
-                </article>
-              ))}
-            </div>
-          </Container>
-        </section>
-
-        <section className="py-16 sm:py-20">
-          <Container>
-            <SectionHeader
-              kicker="Music Business"
-              title="Music Business Services"
-              subtitle="Strategic services to help artists release smarter, grow faster, and monetize effectively."
-            />
-
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {musicBusinessServices.map((service) => (
-                <article
-                  key={service.title}
-                  className="rounded-2xl border border-white/10 bg-surface p-6 shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]"
-                >
-                  <h3 className="text-lg font-bold leading-tight text-foreground">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-text">{service.description}</p>
-                </article>
-              ))}
-            </div>
-          </Container>
-        </section>
-
-        <PricingSection />
-
-        <section className="py-16 sm:py-20">
-          <Container>
-            <SectionHeader
-              kicker="Capabilities"
-              title="A small set of high-impact skills"
-              subtitle="Built to ship, scale, and convert — without bloated process."
-            />
-
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {capabilities.map((item) => (
-                <div key={item} className="rounded-2xl border border-white/10 bg-surface p-5 text-sm font-medium text-foreground shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
-                  {item}
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {technicalSkills.map((skill) => (
+                <div key={skill} className="rounded-2xl border border-white/10 bg-surface p-5 text-sm font-medium text-foreground shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
+                  {skill}
                 </div>
               ))}
             </div>
@@ -237,61 +144,28 @@ export default function Home() {
 
         <section className="py-16 sm:py-20">
           <Container>
-            <SectionHeader
-              kicker="Process"
-              title="Discover → Design → Build → Ship → Iterate"
-              subtitle="Simple and transparent workflow for fast execution and predictable delivery."
-            />
-
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-              {process.map((step, index) => (
-                <div key={step} className="rounded-2xl border border-white/10 bg-surface p-5 shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
-                  <p className="text-xs font-semibold text-accent">0{index + 1}</p>
-                  <p className="mt-2 text-sm font-bold text-foreground">{step}</p>
-                </div>
-              ))}
+            <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-surface to-accent/10 p-10 text-center shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
+              <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+                Ready to See My Work?
+              </h2>
+              <p className="mt-4 max-w-2xl mx-auto text-base text-text sm:text-lg">
+                Check out all my projects and portfolio at Hotcoreweb Services
+              </p>
+              <div className="mt-8">
+                <Button href="https://hws.hotcorebeatz.com/" size="lg" className="text-lg px-10 py-6">
+                  Browse Projects →
+                </Button>
+              </div>
             </div>
           </Container>
         </section>
 
         <FooterCta />
-
-        {/* Local SEO Content Section */}
-        <section className="py-16 sm:py-20">
-          <Container>
-            <div className="rounded-2xl border border-white/10 bg-surface p-8 text-center">
-              <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
-                Serving Clients Across Kenya & Africa
-              </h2>
-              <p className="mt-4 max-w-3xl mx-auto text-sm text-text sm:text-base">
-                Based in <strong className="text-foreground">Nakuru, Kenya</strong>, I provide professional web development and music business strategy services to clients across Kenya including Nairobi, Mombasa, Kisumu, Eldoret, and throughout Africa. 
-                Whether you need a simple website, e-commerce solution with M-Pesa integration, or music business consulting, I deliver high-quality, affordable solutions tailored to your needs.
-              </p>
-              <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs text-text-muted">
-                <span>Nakuru</span>
-                <span>•</span>
-                <span>Nairobi</span>
-                <span>•</span>
-                <span>Mombasa</span>
-                <span>•</span>
-                <span>Kisumu</span>
-                <span>•</span>
-                <span>Eldoret</span>
-                <span>•</span>
-                <span>Thika</span>
-                <span>•</span>
-                <span>Kenya</span>
-                <span>•</span>
-                <span>Africa</span>
-              </div>
-            </div>
-          </Container>
-        </section>
       </main>
 
       <footer className="pb-10">
         <Container>
-          <p className="text-xs text-text-muted">© {new Date().getFullYear()} Benardo Pro. Minimal. Premium. Production-ready.</p>
+          <p className="text-xs text-text-muted">© {new Date().getFullYear()} Benard M. All rights reserved.</p>
         </Container>
       </footer>
     </div>

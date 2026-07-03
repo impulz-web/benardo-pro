@@ -1,16 +1,17 @@
 export const siteConfig = {
-  name: "Benardo Pro",
-  title: "Benardo Pro | Full-Stack Web Developer & Music Business Strategist",
+  name: "Benard M",
+  title: "Benard M | Full-Stack Web Developer & Media Producer",
   description:
-    "Benardo Pro builds fast, scalable web products and SEO-focused digital experiences with Next.js, TypeScript, and AI workflows.",
+    "Benard M builds fast, scalable web products and creative media experiences.",
   url: "https://benardo.hotcorebeatz.com",
   email: "benardo@hotcorebeatz.com",
   phone: "+254717389815",
   whatsappUrl: "https://wa.me/254717389815",
   nav: [
     { href: "/", label: "Home" },
-    { href: "/projects", label: "Projects" },
-    { href: "/#pricing", label: "Pricing" },
+    { href: "https://hws.hotcorebeatz.com/", label: "Projects" },
+    { href: "https://www.hotcorebeatz.com/consultant/about", label: "About" },
+    { href: "/resume", label: "Resume" },
     { href: "/contact", label: "Contact" },
   ],
 } as const;

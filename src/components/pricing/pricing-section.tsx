@@ -91,7 +91,7 @@ export function PricingSection() {
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
             Pricing Plans
           </p>
-          <h2 className="text-3xl font-black leading-tight tracking-[-0.02em] text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-semibold leading-tight tracking-[-0.02em] text-foreground sm:text-4xl lg:text-5xl">
             Invest in Your Digital Presence
           </h2>
           <p className="mt-5 max-w-2xl mx-auto text-base text-text sm:text-lg">
@@ -121,7 +121,7 @@ export function PricingSection() {
 
               {/* Plan Header */}
               <div className="mb-5">
-                <h3 className="text-lg font-bold text-foreground">{plan.name}</h3>
+                <h3 className="text-lg font-semibold text-foreground">{plan.name}</h3>
                 <div className="mt-3 flex items-baseline gap-1">
                   <span className="text-3xl font-black tracking-tight text-foreground">
                     {plan.price}

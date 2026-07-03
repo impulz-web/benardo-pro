@@ -12,7 +12,7 @@ export function SectionHeader({ kicker, title, subtitle }: SectionHeaderProps) {
           {kicker}
         </p>
       )}
-      <h2 className="max-w-3xl text-3xl font-black tracking-[-0.02em] text-foreground sm:text-4xl">
+      <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.02em] text-foreground sm:text-4xl">
         {title}
       </h2>
       <div className="h-[2px] w-28 rounded bg-gradient-to-r from-accent via-accent/80 to-transparent" />
