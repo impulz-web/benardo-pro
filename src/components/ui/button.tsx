@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "destructive";
 type ButtonSize = "sm" | "md" | "lg";
 
 type ButtonProps = {
@@ -11,20 +11,21 @@ type ButtonProps = {
   size?: ButtonSize;
   className?: string;
   external?: boolean;
-};
+} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className" | "children">;
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "border border-accent bg-accent !text-black visited:!text-black active:!text-black shadow-[0_12px_30px_rgba(97,206,112,0.3)] hover:brightness-105",
+    "border border-accent bg-accent !text-black visited:!text-black active:!text-black hover:bg-hover",
   secondary:
-    "border border-border-soft bg-surface text-foreground hover:border-accent/45 hover:bg-surface-strong",
+    "border border-border-soft bg-surface text-foreground hover:border-accent hover:bg-surface-strong",
   ghost: "border border-transparent bg-transparent text-foreground hover:bg-surface",
+  destructive: "border border-danger bg-transparent text-danger hover:bg-danger/10",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: "px-3 py-1.5 text-xs",
-  md: "px-5 py-2.5 text-sm",
-  lg: "px-8 py-4 text-base",
+  sm: "min-h-9 px-3 text-xs",
+  md: "min-h-10 px-4 text-sm",
+  lg: "min-h-11 px-6 text-base",
 };
 
 export function Button({
@@ -34,11 +35,12 @@ export function Button({
   size = "md",
   className,
   external,
+  type = "button",
+  ...buttonProps
 }: ButtonProps) {
-  // Automatically detect external links (https/http)
   const isExternal = external ?? (href?.startsWith("http://") || href?.startsWith("https://"));
   
-  const classes = `inline-flex items-center justify-center rounded-full font-semibold tracking-tight transition duration-200 ${sizeStyles[size]} ${variantStyles[variant]} ${className ?? ""}`.trim();
+  const classes = `inline-flex items-center justify-center rounded-control font-semibold tracking-tight transition-colors duration-200 ${sizeStyles[size]} ${variantStyles[variant]} ${className ?? ""}`.trim();
 
   if (href) {
     if (isExternal) {
@@ -52,5 +54,5 @@ export function Button({
     return <Link href={href} className={classes}>{children}</Link>;
   }
 
-  return <button className={classes}>{children}</button>;
+  return <button {...buttonProps} type={type} className={classes}>{children}</button>;
 }

@@ -238,7 +238,6 @@ export default function ResumeContent() {
                   <li>Elementor Web Development – Udemy (2024)</li>
                   <li>Certified Digital Marketing Strategist – LinkedIn (2024)</li>
                   <li>Advanced Music Production – Mixxin Academy (2025)</li>
-                  <li>Degree in Information & Technology - Mount Kenya University (2020)</li>
                   <li>Media Production Certification – BH Media Production (2016)</li>
                 </ul>
               </section>

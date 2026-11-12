@@ -2,7 +2,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
 
 ```bash
 npm run dev
@@ -16,13 +15,39 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+# Benardo Pro
+
+Portfolio and service site for Benard Mulindi, built with Next.js App Router, TypeScript, and Tailwind CSS.
+
+## Frontend foundations
+
+The interface follows a calm, content-first system. Reusable tokens live in `src/app/globals.css`; shared primitives live in `src/components/ui`.
+
+- Use semantic color tokens for surfaces, text, borders, feedback, and accent actions.
+- Use the shared `Container`, `SectionHeader`, `Button`, and `Badge` primitives before adding a new pattern.
+- Prefer server components. Add a client component only when interaction requires browser state or events.
+- Use semantic HTML, visible `:focus-visible` states, meaningful labels, and `prefers-reduced-motion` support.
+- Keep spacing, type scale, and content width predictable across breakpoints. Prefer CSS and native HTML over new dependencies.
+- Use cards only for meaningful grouping; avoid gradients, decorative effects, and unnecessary animation.
+
+## Getting Started
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5000](http://localhost:5000) in your browser.
+
+## Validation
+
+```bash
+npm run lint
+npm run build
+```
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.

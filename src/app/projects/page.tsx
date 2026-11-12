@@ -7,7 +7,11 @@ import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "View all projects at Hotcoreweb Services.",
+  description:
+    "Selected web development, e-commerce and music-tech projects by Benard M — case studies delivered for small and medium-sized businesses and upcoming artists across Kenya.",
+  alternates: {
+    canonical: "/projects",
+  },
 };
 
 export default function ProjectsPage() {
@@ -32,7 +36,7 @@ export default function ProjectsPage() {
                 <p className="text-sm leading-relaxed text-text mb-8">
                   Check out all my work and projects at Hotcoreweb Services
                 </p>
-                <Button href="https://hws.hotcorebeatz.com/" size="lg">
+                <Button href="https://hws.co.ke/" size="lg">
                   Browse Projects →
                 </Button>
               </div>

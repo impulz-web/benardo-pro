@@ -7,7 +7,11 @@ import { SectionHeader } from "@/components/ui/section-header";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Benard M.",
+  description:
+    "Contact Benard M — music business consultant and full-stack developer for small and medium-sized businesses and upcoming artists across all towns in Kenya. WhatsApp +254 717 389 815.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -25,8 +29,8 @@ export default function ContactPage() {
             />
 
             <div className="mt-12 flex justify-center">
-              <Button href="https://premium.chat/MrCrusher" size="lg" className="text-base px-10 py-4">
-                Chat With Me Now
+              <Button href="https://wa.me/254717389815" size="lg" className="text-base px-10 py-4">
+                WhatsApp 0717389815
               </Button>
             </div>
 
@@ -49,7 +53,7 @@ export default function ContactPage() {
                   For web development, software, and tech services
                 </p>
                 <div className="mt-8">
-                  <Button href="https://hws.hotcorebeatz.com/pricing" size="lg">
+                  <Button href="https://hws.co.ke/pricing" size="lg">
                     Contact Web Development →
                   </Button>
                 </div>

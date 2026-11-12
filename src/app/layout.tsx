@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SEOMetadata } from "@/components/seo/seo-metadata";
+import { CONTACT, LOCATION, siteConfig } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,68 +14,59 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const ogImage = {
+  url: "/benardo-hero image.png",
+  alt: `${CONTACT.displayName} — Music Business Consultant & Full-Stack Developer in Kenya`,
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://benardo.hotcorebeatz.com"),
+  metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
   title: {
-    default: "Benard Mulindi | Full-Stack Web Developer & Media Producer",
-    template: "%s | Benard Mulindi",
+    default: siteConfig.title,
+    template: `%s | ${CONTACT.displayName}`,
   },
-  description:
-    "Benard Mulindi provides full-stack web development and media production services. Build fast, scalable websites, product platforms, and digital experiences with Next.js, TypeScript, and AI workflows.",
-  keywords: [
-    "Benard Mulindi",
-    "Benard Mulindi Kenya",
-    "Benard Mulindi developer",
-    "web development Nakuru",
-    "website developer Kenya",
-    "full-stack developer Africa",
-    "media production Kenya",
-    "e-commerce website Kenya",
-    "Next.js developer Nakuru",
-    "TypeScript developer Kenya",
-    "website design Kenya",
-    "online store Kenya",
-    "M-Pesa integration",
-    "digital marketing Nakuru",
-    "music production Kenya",
-    "artist branding Africa",
-    "startup website Kenya",
-    "business website Africa",
-    "freelance developer Nakuru",
-    "web agency Kenya",
-    "professional website Kenya",
-    "affordable website Kenya",
-    "custom web development Africa",
-  ],
-  authors: [{ name: "Benard Mulindi", url: "https://benardo.hotcorebeatz.com" }],
-  creator: "Benard Mulindi",
-  publisher: "Benard Mulindi",
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: CONTACT.fullName, url: siteConfig.url }],
+  creator: CONTACT.fullName,
+  publisher: CONTACT.fullName,
+  category: "Business & Technology Consulting",
+  alternates: {
+    canonical: "/",
+  },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "Benard Mulindi | Full-Stack Web Developer & Media Producer",
-    description:
-      "Benard Mulindi provides full-stack web development and media production services, with SEO-focused builds powered by Next.js, TypeScript, and AI workflows.",
+    title: siteConfig.title,
+    description: siteConfig.description,
     type: "website",
-    url: "https://benardo.hotcorebeatz.com",
-    siteName: "Benard Mulindi",
+    url: siteConfig.url,
+    siteName: `${CONTACT.displayName} | Music Business Consultant & Full-Stack Developer`,
     locale: "en_KE",
     alternateLocale: ["en_US", "en_GB"],
+    images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Benard Mulindi | Full-Stack Web Developer & Media Producer",
-    description:
-      "Benard Mulindi provides full-stack web development and media production services, with SEO-focused builds powered by Next.js, TypeScript, and AI workflows.",
+    title: siteConfig.title,
+    description: siteConfig.description,
     creator: "@benardopro",
+    images: [ogImage.url],
+  },
+  other: {
+    "geo.region": LOCATION.country,
+    "geo.placename": LOCATION.city,
+    "geo.position": `${LOCATION.latitude};${LOCATION.longitude}`,
+    ICBM: `${LOCATION.latitude}, ${LOCATION.longitude}`,
   },
   robots: {
     index: true,
@@ -89,13 +81,20 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#0b0b0b",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-KE">
       <head>
         <SEOMetadata />
       </head>

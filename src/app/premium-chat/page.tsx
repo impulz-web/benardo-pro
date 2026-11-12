@@ -3,9 +3,15 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import PremiumChatWidget from "@/components/site/PremiumChatWidget";
 
-export const metadata = {
-  title: "Premium Chat | Benard Mulindi",
-  description: "Connect with Benard Mulindi via premium chat",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Premium Chat",
+  description:
+    "Book a premium consultation with Benard M — music business strategy for upcoming artists and web development for small and medium-sized businesses in Kenya.",
+  alternates: {
+    canonical: "/premium-chat",
+  },
 };
 
 export default function PremiumChatPage() {

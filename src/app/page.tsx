@@ -1,10 +1,28 @@
+import type { Metadata } from "next";
+import { JsonLd } from "@/components/seo/json-ld";
+import { LiveProjectCard } from "@/components/project/live-project-card";
 import { FooterCta } from "@/components/site/footer-cta";
 import { HeroImageSwitcher } from "@/components/site/hero-image-switcher";
 import { Navbar } from "@/components/site/navbar";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeader } from "@/components/ui/section-header";
+import { liveProjects } from "@/data/live-projects";
+import { buildLiveProjectsSchema, buildPageGraph } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: { absolute: siteConfig.title },
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: siteConfig.url,
+  },
+};
 
 export default function Home() {
   const technicalSkills = [
@@ -26,6 +44,11 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
+      <JsonLd
+        id="live-projects-structured-data"
+        data={buildPageGraph([buildLiveProjectsSchema(liveProjects)])}
+      />
+
       <main>
         <section className="relative isolate overflow-hidden">
           <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[rgba(11,11,11,0.92)] via-[rgba(11,11,11,0.82)] to-[rgba(97,206,112,0.18)]" />
@@ -45,11 +68,11 @@ export default function Home() {
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-start">
-                <Button href="https://hws.hotcorebeatz.com/" className="w-full sm:w-auto">
+                <Button href="https://hws.co.ke/" className="w-full sm:w-auto">
                   Browse Projects
                 </Button>
-                <Button href="https://premium.chat/MrCrusher" className="w-full sm:w-auto">
-                  Chat With Me
+                <Button href={siteConfig.whatsappUrl} className="w-full sm:w-auto">
+                  WhatsApp 0717389815
                 </Button>
                 <Button href="/contact" variant="secondary" className="w-full sm:w-auto">
                   Get in Touch
@@ -80,7 +103,7 @@ export default function Home() {
             <SectionHeader
               kicker="Professional"
               title="What I Do"
-              subtitle="Two distinct professional paths converging to create unique value"
+              subtitle="Four disciplines that come together to build reliable systems for businesses and artists"
             />
 
             <div className="grid gap-6 md:grid-cols-2">
@@ -88,6 +111,18 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-foreground">Full Stack Developer</h3>
                 <p className="mt-4 text-sm leading-relaxed text-text">
                   Building fast, scalable web applications with modern technologies like Next.js, TypeScript, and AI workflows.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-surface p-8 shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
+                <h3 className="text-2xl font-bold text-foreground">AI Engineer</h3>
+                <p className="mt-4 text-sm leading-relaxed text-text">
+                  Building systems with AI — integrating language models, prompt engineering, and automation into real business workflows.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-surface p-8 shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
+                <h3 className="text-2xl font-bold text-foreground">SEO Optimisation</h3>
+                <p className="mt-4 text-sm leading-relaxed text-text">
+                  Technical and on-page SEO that gets businesses found — structured data, indexing, site speed, and content architecture.
                 </p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-surface p-8 shadow-[0_16px_36px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(0,0,0,0.45)]">
@@ -130,6 +165,22 @@ export default function Home() {
         <section className="py-16 sm:py-20">
           <Container>
             <SectionHeader
+              kicker="Portfolio"
+              title="Live Projects"
+              subtitle="Platforms and products I've built that are live and in use today."
+            />
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {liveProjects.map((project) => (
+                <LiveProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        <section className="py-16 sm:py-20">
+          <Container>
+            <SectionHeader
               kicker="Skills"
               title="Technical Skills"
               subtitle="Technologies and tools I work with daily"
@@ -155,11 +206,11 @@ export default function Home() {
                 Check out all my projects and portfolio at Hotcoreweb Services
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-                <Button href="https://hws.hotcorebeatz.com/" size="lg" className="text-lg px-10 py-6">
+                <Button href="https://hws.co.ke/" size="lg" className="text-lg px-10 py-6">
                   Browse Projects →
                 </Button>
-                <Button href="https://premium.chat/MrCrusher" size="lg" className="text-lg px-10 py-6" variant="secondary">
-                  Chat With Me
+                <Button href={siteConfig.whatsappUrl} size="lg" className="text-lg px-10 py-6" variant="secondary">
+                  WhatsApp 0717389815
                 </Button>
               </div>
             </div>
@@ -173,8 +224,8 @@ export default function Home() {
         <Container>
           <div className="flex flex-col items-center gap-4">
             <p className="text-xs text-text-muted">© {new Date().getFullYear()} Benard M. All rights reserved.</p>
-            <a href="https://premium.chat/MrCrusher" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline text-sm">
-              Chat With Me
+            <a href={siteConfig.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline text-sm">
+              WhatsApp 0717389815
             </a>
           </div>
         </Container>

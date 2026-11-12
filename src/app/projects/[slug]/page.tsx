@@ -6,7 +6,9 @@ import { Navbar } from "@/components/site/navbar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getProjectBySlug, getProjects } from "@/data/projects";
+import { buildBreadcrumbSchema, buildPageGraph, buildProjectSchema } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -29,6 +31,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: project.name,
     description: project.summary,
+    alternates: {
+      canonical: `/projects/${project.slug}`,
+    },
+    keywords: [...project.tags, "Benard M", "web development Kenya"],
+    openGraph: {
+      title: project.name,
+      description: project.summary,
+      type: "article",
+    },
   };
 }
 
@@ -43,6 +54,18 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
+
+      <JsonLd
+        id="project-structured-data"
+        data={buildPageGraph([
+          buildBreadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Projects", path: "/projects" },
+            { name: project.name, path: `/projects/${project.slug}` },
+          ]),
+          buildProjectSchema(project),
+        ])}
+      />
 
       <main>
         <section className="py-20 sm:py-24">

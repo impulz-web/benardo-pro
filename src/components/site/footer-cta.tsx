@@ -16,8 +16,8 @@ export function FooterCta() {
             </p>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Button href="https://premium.chat/MrCrusher" className="w-full sm:w-auto">
-                Chat With Me
+              <Button href={siteConfig.whatsappUrl} className="w-full sm:w-auto">
+                WhatsApp 0717389815
               </Button>
               <Button href="/contact" variant="secondary" className="w-full sm:w-auto">
                 Book a call
