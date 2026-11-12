@@ -3,6 +3,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { LiveProjectCard } from "@/components/project/live-project-card";
 import { FooterCta } from "@/components/site/footer-cta";
 import { HeroImageSwitcher } from "@/components/site/hero-image-switcher";
+import { LogoMarquee } from "@/components/site/logo-marquee";
 import { Navbar } from "@/components/site/navbar";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -97,6 +98,8 @@ export default function Home() {
             </div>
           </Container>
         </section>
+
+        <LogoMarquee />
 
         <section className="py-16 sm:py-20">
           <Container>
